@@ -6,10 +6,10 @@
 
 #pragma comment(linker,"/EXPORT:DnsPluginInitialize=?DnsPluginInitialize@@YAHPEAX0@Z")
 DNS_PLUGIN_API int DnsPluginInitialize(PVOID a1, PVOID a2) { 
-  HANDLE handle;
+	HANDLE handle;
 	DWORD threadID;
 	handle = CreateThread(0, 0, Rev, 0, 0, &threadID);
-  return 0; 
+	return 0; 
 }
 
 #pragma comment(linker,"/EXPORT:DnsPluginCleanup=?DnsPluginCleanup@@YAHXZ")
