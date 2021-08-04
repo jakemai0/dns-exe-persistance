@@ -2,7 +2,7 @@
 sample plugin dll for windows DNS server: ServerLevelPluginDll, inject a malicious DLL plugin into the DNS service (compromised user is a member of DNSAdmin group on the target machine)
 
 Modified and added a reverse shell \
-From IppSec's solution to Resolute@HTB
+From IppSec's solution for Resolute@HTB
 
 
 
